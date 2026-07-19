@@ -27,11 +27,11 @@ export default function NewsletterForm() {
         type="email"
         required
         placeholder="Seu e-mail"
-        className="w-full bg-transparent text-sm text-white placeholder:text-white/50 focus:outline-none"
+        className="w-full bg-transparent text-base text-white placeholder:text-white/50 focus:outline-none"
       />
       <button
         type="submit"
-        className="flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition-colors hover:bg-white/90"
+        className="flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-base font-medium text-black transition-colors hover:bg-white/90"
       >
         Sign Up <span aria-hidden>→</span>
       </button>

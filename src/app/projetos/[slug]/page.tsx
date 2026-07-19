@@ -21,8 +21,8 @@ export default async function ProjectPage({
 
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-6 pt-10 md:px-10">
-        <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+      <div className="mx-auto max-w-[1600px] px-6 pt-10 md:px-16">
+        <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
           {project.title.toUpperCase()}
         </h1>
       </div>
@@ -37,30 +37,30 @@ export default async function ProjectPage({
         />
       </div>
 
-      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 border-b border-black/10 px-6 py-6 sm:flex-row sm:items-center md:px-10">
+      <div className="mx-auto flex max-w-[1600px] flex-col items-start justify-between gap-4 border-b border-black/10 px-6 py-6 sm:flex-row sm:items-center md:px-16">
         <div>
-          <p className="font-display text-lg font-extrabold">
+          <p className="font-display text-2xl font-extrabold">
             {project.title}
           </p>
-          <p className="text-sm italic text-black/50">{project.subtitle}</p>
+          <p className="text-lg italic text-black/50">{project.subtitle}</p>
         </div>
-        <span className="text-sm text-black/50">{project.category}</span>
-        <span className="text-sm text-black/50">/ {project.year}</span>
+        <span className="text-xl italic text-black/40">{project.category}</span>
+        <span className="text-base text-black/50">/ {project.year}</span>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+      <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-16">
         <div className="grid gap-10 sm:grid-cols-[1fr_2fr]">
-          <div className="flex items-start justify-between text-2xl text-black/60 sm:flex-col sm:gap-40">
+          <div className="flex items-start justify-between text-3xl text-black/60 sm:flex-col sm:gap-40">
             <span aria-hidden>+</span>
             <span aria-hidden>+</span>
           </div>
           <div>
-            <h2 className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">
+            <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
               {project.title.toUpperCase()}
               <br />
               {project.subtitle.toUpperCase()}
             </h2>
-            <div className="mt-6 space-y-4 text-black/70">
+            <div className="mt-6 space-y-4 text-xl text-black/70 sm:text-2xl">
               {project.description.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}

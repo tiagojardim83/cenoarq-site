@@ -2,22 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { nav } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/5">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-white">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-16 md:py-6">
         <Link href="/" className="shrink-0">
           <Image
             src={assetPath("/logos/cenoarq_horizontal.svg")}
             alt="Cenoarq"
-            width={140}
-            height={33}
-            className="h-auto w-auto"
+            width={190}
+            height={36}
             priority
           />
         </Link>
-        <nav className="hidden gap-8 text-sm font-medium tracking-wide sm:flex">
+        <nav className="hidden gap-10 text-base tracking-wide sm:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -28,6 +28,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <MobileMenu />
       </div>
     </header>
   );

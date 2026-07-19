@@ -7,8 +7,8 @@ import NewsletterForm from "@/components/NewsletterForm";
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 pt-16 md:px-10">
-        <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+      <div className="mx-auto max-w-[1600px] px-6 pt-16 md:px-16">
+        <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-8xl lg:text-9xl">
           Seja o primeiro a
           <br />
           receber nossas novidades!
@@ -23,16 +23,15 @@ export default function Footer() {
             <Image
               src={assetPath("/logos/Vanilla_cenoarq_horizontal.png")}
               alt="Cenoarq"
-              width={120}
-              height={28}
-              className="h-auto w-auto"
+              width={150}
+              height={35}
             />
           </Link>
 
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 sm:gap-20">
             <div>
-              <h3 className="text-sm font-semibold text-white/90">Navegação</h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/70">
+              <h3 className="text-base font-bold text-white">Navegação</h3>
+              <ul className="mt-4 space-y-2 text-base text-white/70">
                 {nav.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="hover:text-white">
@@ -44,8 +43,8 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-white/90">Social</h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/70">
+              <h3 className="text-base font-bold text-white">Social</h3>
+              <ul className="mt-4 space-y-2 text-base text-white/70">
                 <li>
                   <a
                     href={contact.instagram}
@@ -60,8 +59,8 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-white/90">Contatos</h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/70">
+              <h3 className="text-base font-bold text-white">Contatos</h3>
+              <ul className="mt-4 space-y-2 text-base text-white/70">
                 <li>
                   <a href={`mailto:${contact.email}`} className="hover:text-white">
                     {contact.email}

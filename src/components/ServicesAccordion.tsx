@@ -7,7 +7,7 @@ export default function ServicesAccordion() {
   const [openSlug, setOpenSlug] = useState<string | null>(null);
 
   return (
-    <div className="mx-auto max-w-7xl divide-y divide-black/10 border-b border-black/10 px-6 md:px-10">
+    <div className="mx-auto max-w-[1600px] divide-y divide-black/10 border-b border-black/10 px-6 md:px-16">
       {services.map((service) => {
         const isOpen = openSlug === service.slug;
         return (
@@ -16,13 +16,13 @@ export default function ServicesAccordion() {
               type="button"
               onClick={() => setOpenSlug(isOpen ? null : service.slug)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between py-6 text-left"
+              className="flex w-full items-center justify-between py-8 text-left"
             >
-              <h3 className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
+              <h3 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
                 {service.title.toUpperCase()}
               </h3>
               <span
-                className="text-2xl text-black/60 transition-transform duration-300"
+                className="text-3xl text-black/60 transition-transform duration-300"
                 style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
                 aria-hidden
               >
@@ -34,7 +34,7 @@ export default function ServicesAccordion() {
               style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
             >
               <div className="min-h-0">
-                <p className="max-w-2xl pb-6 text-black/70">
+                <p className="max-w-2xl pb-8 text-lg text-black/70 sm:text-xl">
                   {service.description}
                 </p>
               </div>
