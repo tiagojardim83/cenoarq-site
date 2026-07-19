@@ -13,6 +13,12 @@ export const stats = [
   { value: "+74", label: "clientes satisfeitos" },
 ];
 
+export const heroSlides = [
+  { label: "cenografia", image: "/images/hero-building.jpg" },
+  { label: "arquitetura", image: "/images/hero-arquitetura-1.jpg" },
+  { label: "arquitetura", image: "/images/hero-arquitetura-2.jpg" },
+];
+
 export const services = [
   {
     slug: "arquitetura",

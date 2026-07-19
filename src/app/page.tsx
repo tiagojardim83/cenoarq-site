@@ -4,6 +4,7 @@ import { stats, projects, clients, aboutText } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
 import ClientsMarquee from "@/components/ClientsMarquee";
 import ServicesAccordion from "@/components/ServicesAccordion";
+import HeroCarousel from "@/components/HeroCarousel";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -13,39 +14,7 @@ export default function Home() {
   return (
     <div id="top">
       {/* Hero */}
-      <div className="relative aspect-[4/5] w-full sm:aspect-[16/9] lg:aspect-[1920/1105]">
-        <Image
-          src={assetPath("/images/hero-building.jpg")}
-          alt="Cenoarq — cenografia"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
-          <div className="flex items-center gap-4 text-xl font-extrabold sm:text-2xl">
-            <span>01</span>
-            <span className="h-px w-20 bg-black/50 sm:w-32" aria-hidden />
-            <span>03</span>
-          </div>
-
-          <div className="mx-auto flex flex-col items-center gap-5 text-center">
-            <span className="text-sm font-medium tracking-[0.3em] sm:text-base lg:text-[25px] lg:tracking-[0.15em]">
-              SERVICES
-            </span>
-            <h1 className="font-display text-4xl font-medium tracking-tight sm:text-5xl lg:text-[60px]">
-              [ cenografia ]
-            </h1>
-            <Link
-              href="#servicos"
-              className="rounded-full border border-black/40 px-7 py-3 text-sm font-bold transition-colors hover:bg-black hover:text-white"
-            >
-              ver mais
-            </Link>
-          </div>
-
-          <div className="h-6" aria-hidden />
-        </div>
-      </div>
+      <HeroCarousel />
 
       {/* Sobre */}
       <section id="sobre" className="mx-auto max-w-[1600px] px-6 py-24 md:px-16">
