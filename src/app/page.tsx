@@ -78,11 +78,12 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-12 border-t border-black/10 pt-10 sm:grid-cols-4">
+        <div className="mt-16 grid grid-cols-2 gap-x-10 gap-y-16 sm:gap-x-20 sm:gap-y-24">
           {stats.map((stat) => (
-            <div key={stat.label}>
-              <p className="font-display text-6xl font-extrabold text-[#6e6e6e] sm:text-7xl lg:text-[85px]">
-                {stat.value}
+            <div key={stat.label} className="border-t border-black/20 pt-6">
+              <p className="font-display text-6xl text-[#6e6e6e] sm:text-7xl lg:text-[85px]">
+                <span className="font-normal">+</span>
+                <span className="font-black">{stat.value.replace("+", "")}</span>
               </p>
               <p className="mt-1 text-xl text-[#c2c2c2] sm:text-2xl lg:text-[28px]">
                 {stat.label}
