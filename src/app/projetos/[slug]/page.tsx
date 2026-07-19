@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/data";
+import { assetPath } from "@/lib/site-config";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -28,7 +29,7 @@ export default async function ProjectPage({
 
       <div className="relative mt-8 aspect-[16/9] w-full sm:aspect-[21/9]">
         <Image
-          src={project.heroImage}
+          src={assetPath(project.heroImage)}
           alt={project.title}
           fill
           priority
@@ -71,7 +72,7 @@ export default async function ProjectPage({
           {project.gallery.map((image, i) => (
             <div key={image} className="relative aspect-[21/9] w-full">
               <Image
-                src={image}
+                src={assetPath(image)}
                 alt={`${project.title} — imagem ${i + 1}`}
                 fill
                 className="object-cover"

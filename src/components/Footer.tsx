@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { nav, contact } from "@/lib/data";
+import { assetPath } from "@/lib/site-config";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Footer() {
@@ -20,7 +21,7 @@ export default function Footer() {
         <div className="mt-20 flex flex-col gap-12 border-t border-white/15 py-10 sm:flex-row sm:items-start sm:justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logos/Vanilla_cenoarq_horizontal.png"
+              src={assetPath("/logos/Vanilla_cenoarq_horizontal.png")}
               alt="Cenoarq"
               width={120}
               height={28}

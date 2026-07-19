@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { stats, services, projects, clients, aboutText } from "@/lib/data";
+import { stats, projects, clients, aboutText } from "@/lib/data";
+import { assetPath } from "@/lib/site-config";
 import ClientsMarquee from "@/components/ClientsMarquee";
+import ServicesAccordion from "@/components/ServicesAccordion";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -14,7 +16,7 @@ export default function Home() {
       <Link href="#servicos" className="block">
         <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
           <Image
-            src="/images/hero-building.jpg"
+            src={assetPath("/images/hero-building.jpg")}
             alt="Cenoarq — cenografia"
             fill
             priority
@@ -56,35 +58,21 @@ export default function Home() {
       <section id="servicos">
         <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
           <Image
-            src="/images/services-banner.jpg"
+            src={assetPath("/images/services-banner.jpg")}
             alt="Serviços — arquitetura e cenografia"
             fill
             className="object-cover"
           />
         </div>
 
-        <div className="mx-auto max-w-7xl divide-y divide-black/10 border-b border-black/10 px-6 md:px-10">
-          {services.map((service) => (
-            <div
-              key={service.slug}
-              className="flex items-center justify-between py-6"
-            >
-              <h3 className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
-                {service.title.toUpperCase()}
-              </h3>
-              <span className="text-2xl text-black/60" aria-hidden>
-                +
-              </span>
-            </div>
-          ))}
-        </div>
+        <ServicesAccordion />
       </section>
 
       {/* Projetos */}
       <section id="projetos">
         <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
           <Image
-            src="/images/projetos-banner.jpg"
+            src={assetPath("/images/projetos-banner.jpg")}
             alt="Projetos"
             fill
             className="object-cover"

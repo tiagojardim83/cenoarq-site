@@ -1,14 +1,13 @@
 import type { NextConfig } from "next";
-
-const repoName = "cenoarq-site";
+import { basePath } from "./src/lib/site-config";
 
 const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
+  basePath,
+  assetPrefix: `${basePath}/`,
 };
 
 export default nextConfig;

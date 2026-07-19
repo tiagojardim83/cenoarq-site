@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { nav } from "@/lib/data";
+import { assetPath } from "@/lib/site-config";
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <Link href="/" className="shrink-0">
           <Image
-            src="/logos/cenoarq_horizontal.svg"
+            src={assetPath("/logos/cenoarq_horizontal.svg")}
             alt="Cenoarq"
             width={140}
             height={33}

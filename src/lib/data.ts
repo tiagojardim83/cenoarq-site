@@ -18,13 +18,13 @@ export const services = [
     slug: "arquitetura",
     title: "Arquitetura",
     description:
-      "Projetos arquitetônicos completos para eventos e espaços corporativos, unindo técnica, segurança e um olhar apurado para cada detalhe estrutural.",
+      "A arquitetura vai além do desenho: é uma experiência visual e emocional. Nossos projetos são desenvolvidos com renderização 3D de alta qualidade, animações realistas e apresentações que encantam e comunicam com impacto.",
   },
   {
     slug: "cenografia",
     title: "Cenografia",
     description:
-      "Criação de cenários únicos que transformam qualquer espaço em uma experiência memorável, sob medida para o conceito de cada evento.",
+      "A cenografia é a arte de contar histórias através de espaços. Especializados em grandes eventos, criamos cenários que encantam, envolvem e impressionam, transformando cada ocasião em uma experiência única e memorável. Com um olhar criativo e um planejamento minucioso, desenvolvemos projetos que vão desde eventos corporativos e shows até festas temáticas e exposições. Utilizamos tecnologia de ponta, vídeos em 3D, materiais de alta qualidade e soluções inovadoras para garantir que cada detalhe reflita o conceito e a grandiosidade do seu evento.",
   },
 ];
 

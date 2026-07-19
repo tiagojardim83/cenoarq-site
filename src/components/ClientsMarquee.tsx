@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { clients } from "@/lib/data";
+import { assetPath } from "@/lib/site-config";
 
 export default function ClientsMarquee() {
   const track = [...clients, ...clients];
@@ -10,7 +11,7 @@ export default function ClientsMarquee() {
         {track.map((client, i) => (
           <Image
             key={`${client.name}-${i}`}
-            src={client.logo}
+            src={assetPath(client.logo)}
             alt={client.name}
             width={140}
             height={56}
