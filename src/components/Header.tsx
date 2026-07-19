@@ -12,8 +12,8 @@ export default function Header() {
           <Image
             src={assetPath("/logos/cenoarq_horizontal.svg")}
             alt="Cenoarq"
-            width={190}
-            height={36}
+            width={155}
+            height={29}
             priority
           />
         </Link>

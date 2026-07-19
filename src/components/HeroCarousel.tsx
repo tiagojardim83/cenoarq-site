@@ -19,7 +19,7 @@ export default function HeroCarousel() {
   }
 
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/9] lg:aspect-[1920/1105]">
+    <div className="relative aspect-[4/6] w-full overflow-hidden sm:aspect-[16/9] lg:aspect-[1920/1105]">
       {heroSlides.map((slide, i) => (
         <div
           key={slide.image}
