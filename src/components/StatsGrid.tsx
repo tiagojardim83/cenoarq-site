@@ -27,12 +27,12 @@ export default function StatsGrid() {
   return (
     <div
       ref={ref}
-      className="mt-16 grid grid-cols-2 gap-x-10 gap-y-16 sm:gap-x-20 sm:gap-y-24 lg:grid-cols-[max-content_max-content] lg:justify-between lg:gap-x-0"
+      className="mt-16 grid grid-cols-2 gap-x-10 gap-y-16 sm:gap-x-20 sm:gap-y-24 lg:grid-cols-[max-content_max-content] lg:justify-between lg:gap-x-0 lg:px-10"
     >
       {stats.map((stat, i) => (
         <div
           key={stat.label}
-          className="border-t border-black/20 pt-6 transition-all duration-700 ease-out"
+          className="border-y border-black/20 pb-6 pt-6 transition-all duration-700 ease-out"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
