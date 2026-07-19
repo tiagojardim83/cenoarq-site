@@ -49,16 +49,25 @@ export default function Home() {
 
       {/* Sobre */}
       <section id="sobre" className="mx-auto max-w-[1600px] px-6 py-24 md:px-16">
-        <div className="flex items-start justify-between text-2xl text-black/70">
+        <div
+          className="flex items-start justify-between text-black/70"
+          style={{ fontSize: "clamp(24px, 4.4vw, 56px)" }}
+        >
           <span aria-hidden>+</span>
           <span aria-hidden>+</span>
         </div>
 
-        <h2 className="font-display mt-6 max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+        <h2
+          className="font-display mt-6 max-w-4xl font-extrabold leading-[1.05] tracking-tight"
+          style={{ fontSize: "clamp(24px, 6.25vw, 100px)" }}
+        >
           Transformando espaços em experiências memoráveis.
         </h2>
 
-        <div className="mt-10 max-w-2xl space-y-4 text-xl text-black/70 sm:text-2xl">
+        <div
+          className="mt-10 max-w-3xl space-y-4 text-black/70"
+          style={{ fontSize: "clamp(12px, 1.5625vw, 25px)" }}
+        >
           {aboutText.map((paragraph, i) => (
             <p key={i}>
               {i === 0
