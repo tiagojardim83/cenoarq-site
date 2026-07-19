@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { stats, projects, clients, aboutText } from "@/lib/data";
+import { projects, clients, aboutText } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
 import ClientsMarquee from "@/components/ClientsMarquee";
 import ServicesAccordion from "@/components/ServicesAccordion";
 import HeroCarousel from "@/components/HeroCarousel";
+import StatsGrid from "@/components/StatsGrid";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -20,14 +21,14 @@ export default function Home() {
       <section id="sobre" className="mx-auto max-w-[1600px] px-6 py-24 md:px-16">
         <div
           className="flex items-start justify-between text-black/70"
-          style={{ fontSize: "clamp(24px, 4.4vw, 56px)" }}
+          style={{ fontSize: "clamp(28px, 5.5vw, 70px)" }}
         >
           <span aria-hidden>+</span>
           <span aria-hidden>+</span>
         </div>
 
         <h2
-          className="font-display mt-6 max-w-4xl font-extrabold leading-[1.05] tracking-tight"
+          className="font-display mt-6 font-extrabold leading-[1.05] tracking-tight"
           style={{ fontSize: "clamp(24px, 6.25vw, 100px)" }}
         >
           Transformando espaços em experiências memoráveis.
@@ -56,19 +57,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-x-10 gap-y-16 sm:gap-x-20 sm:gap-y-24">
-          {stats.map((stat) => (
-            <div key={stat.label} className="border-t border-black/20 pt-6">
-              <p className="font-display text-6xl text-[#6e6e6e] sm:text-7xl lg:text-[85px]">
-                <span className="font-normal">+</span>
-                <span className="font-black">{stat.value.replace("+", "")}</span>
-              </p>
-              <p className="mt-1 text-xl text-[#c2c2c2] sm:text-2xl lg:text-[28px]">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        <StatsGrid />
       </section>
 
       {/* Serviços */}
