@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { heroSlides } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
+import ParallaxImage from "@/components/ParallaxImage";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -44,12 +44,12 @@ export default function HeroCarousel() {
           style={{ opacity: i === index ? 1 : 0 }}
           aria-hidden={i !== index}
         >
-          <Image
+          <ParallaxImage
             src={assetPath(slide.image)}
             alt={`Cenoarq — ${slide.label}`}
-            fill
             priority={i === 0}
-            className="object-cover"
+            className="h-full w-full"
+            strength={50}
           />
         </div>
       ))}

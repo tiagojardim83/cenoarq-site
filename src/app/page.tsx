@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { projects, clients, aboutText } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
@@ -7,6 +6,7 @@ import ServicesAccordion from "@/components/ServicesAccordion";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatsGrid from "@/components/StatsGrid";
 import AnimatedPlusMarks from "@/components/AnimatedPlusMarks";
+import ParallaxImage from "@/components/ParallaxImage";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -60,12 +60,11 @@ export default function Home() {
 
       {/* Serviços */}
       <section id="servicos">
-        <div className="relative aspect-[4/5] w-full sm:aspect-[16/9] lg:aspect-[1920/955]">
-          <Image
+        <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/9] lg:aspect-[1920/955]">
+          <ParallaxImage
             src={assetPath("/images/services-banner.jpg")}
             alt="Serviços — arquitetura e cenografia"
-            fill
-            className="object-cover"
+            className="absolute inset-0"
           />
           <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
             <AnimatedPlusMarks className="flex items-start justify-between text-3xl font-bold sm:text-4xl" />
@@ -85,12 +84,11 @@ export default function Home() {
 
       {/* Projetos */}
       <section id="projetos">
-        <div className="relative aspect-[4/5] w-full sm:aspect-[16/9] lg:aspect-[1920/955]">
-          <Image
+        <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/9] lg:aspect-[1920/955]">
+          <ParallaxImage
             src={assetPath("/images/projetos-banner.jpg")}
             alt="Projetos"
-            fill
-            className="object-cover"
+            className="absolute inset-0"
           />
           <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
             <AnimatedPlusMarks className="flex items-start justify-between text-3xl font-bold sm:text-4xl" />

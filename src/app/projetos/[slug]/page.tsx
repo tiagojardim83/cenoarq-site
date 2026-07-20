@@ -2,6 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
+import ParallaxImage from "@/components/ParallaxImage";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -27,13 +28,12 @@ export default async function ProjectPage({
         </h1>
       </div>
 
-      <div className="relative mt-8 aspect-[16/9] w-full sm:aspect-[21/9]">
-        <Image
+      <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden sm:aspect-[21/9]">
+        <ParallaxImage
           src={assetPath(project.heroImage)}
           alt={project.title}
-          fill
           priority
-          className="object-cover"
+          className="absolute inset-0"
         />
       </div>
 
