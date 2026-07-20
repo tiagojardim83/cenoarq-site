@@ -45,6 +45,18 @@ export type Project = {
   description: string[];
 };
 
+const placeholderDescription = [
+  "Na CENOARQ, unimos criatividade, técnica e excelência para criar experiências únicas. Especializados em arquitetura e cenografia para grandes eventos, transformamos espaços em verdadeiros espetáculos, onde cada detalhe é pensado para encantar e impressionar.",
+  "Com um olhar atento às tendências e um compromisso inabalável com a qualidade, entregamos projetos que superam expectativas e elevam o padrão de qualquer ocasião.",
+  "Seja um evento corporativo, um show deslumbrante ou uma festa exclusiva, a CENOARQ está pronta para dar vida ao seu conceito com profissionalismo e maestria.",
+];
+
+const placeholderGallery = [
+  "/images/gallery-drawing.jpg",
+  "/images/gallery-spiral.jpg",
+  "/images/gallery-fabric.jpg",
+];
+
 export const projects: Project[] = [
   {
     slug: "love-wine-summer-times",
@@ -53,16 +65,58 @@ export const projects: Project[] = [
     category: "cenografia",
     year: "2025",
     heroImage: "/images/love-wine-hero.jpg",
-    gallery: [
-      "/images/gallery-drawing.jpg",
-      "/images/gallery-spiral.jpg",
-      "/images/gallery-fabric.jpg",
-    ],
-    description: [
-      "Na CENOARQ, unimos criatividade, técnica e excelência para criar experiências únicas. Especializados em arquitetura e cenografia para grandes eventos, transformamos espaços em verdadeiros espetáculos, onde cada detalhe é pensado para encantar e impressionar.",
-      "Com um olhar atento às tendências e um compromisso inabalável com a qualidade, entregamos projetos que superam expectativas e elevam o padrão de qualquer ocasião.",
-      "Seja um evento corporativo, um show deslumbrante ou uma festa exclusiva, a CENOARQ está pronta para dar vida ao seu conceito com profissionalismo e maestria.",
-    ],
+    gallery: placeholderGallery,
+    description: placeholderDescription,
+  },
+  {
+    slug: "projeto-02",
+    title: "Projeto 02",
+    subtitle: "Nome do Evento",
+    category: "arquitetura",
+    year: "2025",
+    heroImage: "/images/love-wine-hero.jpg",
+    gallery: placeholderGallery,
+    description: placeholderDescription,
+  },
+  {
+    slug: "projeto-03",
+    title: "Projeto 03",
+    subtitle: "Nome do Evento",
+    category: "cenografia",
+    year: "2025",
+    heroImage: "/images/love-wine-hero.jpg",
+    gallery: placeholderGallery,
+    description: placeholderDescription,
+  },
+  {
+    slug: "projeto-04",
+    title: "Projeto 04",
+    subtitle: "Nome do Evento",
+    category: "arquitetura",
+    year: "2024",
+    heroImage: "/images/love-wine-hero.jpg",
+    gallery: placeholderGallery,
+    description: placeholderDescription,
+  },
+  {
+    slug: "projeto-05",
+    title: "Projeto 05",
+    subtitle: "Nome do Evento",
+    category: "cenografia",
+    year: "2024",
+    heroImage: "/images/love-wine-hero.jpg",
+    gallery: placeholderGallery,
+    description: placeholderDescription,
+  },
+  {
+    slug: "projeto-06",
+    title: "Projeto 06",
+    subtitle: "Nome do Evento",
+    category: "arquitetura",
+    year: "2024",
+    heroImage: "/images/love-wine-hero.jpg",
+    gallery: placeholderGallery,
+    description: placeholderDescription,
   },
 ];
 
