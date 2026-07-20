@@ -115,22 +115,22 @@ export default function Home() {
             <Link
               key={project.slug}
               href={`/projetos/${project.slug}`}
-              className="group flex items-center justify-between gap-4 border-b border-black/10 py-8"
+              className="group flex flex-col gap-2 border-b border-black/10 py-8"
             >
-              <div>
+              <div className="flex items-baseline justify-between gap-4">
                 <p className="font-display text-2xl font-extrabold sm:text-3xl">
                   {project.title}
                 </p>
+                <span className="hidden text-xl italic text-black/40 sm:inline sm:text-2xl lg:text-[27px]">
+                  {project.category}
+                </span>
+                <span className="text-base text-black/50">/ {project.year}</span>
+              </div>
+              <div className="flex items-baseline justify-between gap-4">
                 <p className="text-base italic text-black/50 sm:text-lg">
                   {project.subtitle}
                 </p>
-              </div>
-              <span className="hidden text-xl italic text-black/40 sm:inline sm:text-2xl lg:text-[27px]">
-                {project.category}
-              </span>
-              <div className="flex items-center gap-4">
-                <span className="text-base text-black/50">/ {project.year}</span>
-                <span className="text-base underline decoration-black/30 underline-offset-4 group-hover:text-black">
+                <span className="text-base italic text-black/50 underline decoration-black/30 underline-offset-4 group-hover:text-black">
                   ver mais
                 </span>
               </div>
