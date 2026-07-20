@@ -17,7 +17,7 @@ export default function Header() {
             priority
           />
         </Link>
-        <nav className="hidden gap-10 text-base tracking-wide sm:flex">
+        <nav className="hidden gap-10 text-sm tracking-wide sm:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
