@@ -65,7 +65,7 @@ export default function HeroCarousel() {
           <span className="text-sm font-medium tracking-[0.3em] sm:text-base lg:text-[25px] lg:tracking-[0.15em]">
             SERVICES
           </span>
-          <h1 className="font-display text-4xl font-medium tracking-tight sm:text-5xl lg:text-[60px]">
+          <h1 className="font-display text-4xl font-medium tracking-[0.08em] sm:text-5xl lg:text-[60px]">
             [ {heroSlides[index].label} ]
           </h1>
           <Link
