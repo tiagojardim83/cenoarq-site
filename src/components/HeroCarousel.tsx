@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { heroSlides } from "@/lib/data";
@@ -13,9 +13,26 @@ function pad(n: number) {
 export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
   const total = heroSlides.length;
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  function startAutoplay() {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setIndex((i) => (i + 1) % total);
+    }, 2000);
+  }
+
+  useEffect(() => {
+    startAutoplay();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function go(delta: number) {
     setIndex((i) => (i + delta + total) % total);
+    startAutoplay();
   }
 
   return (

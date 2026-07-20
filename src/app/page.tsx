@@ -6,6 +6,7 @@ import ClientsMarquee from "@/components/ClientsMarquee";
 import ServicesAccordion from "@/components/ServicesAccordion";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatsGrid from "@/components/StatsGrid";
+import AnimatedPlusMarks from "@/components/AnimatedPlusMarks";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -19,13 +20,10 @@ export default function Home() {
 
       {/* Sobre */}
       <section id="sobre" className="mx-auto max-w-[1600px] px-6 py-24 md:px-16">
-        <div
+        <AnimatedPlusMarks
           className="flex items-start justify-between text-black/70"
           style={{ fontSize: "clamp(28px, 5.5vw, 70px)" }}
-        >
-          <span aria-hidden>+</span>
-          <span aria-hidden>+</span>
-        </div>
+        />
 
         <h2
           className="font-display mt-6 font-extrabold leading-[1.05] tracking-tight"
@@ -35,7 +33,7 @@ export default function Home() {
         </h2>
 
         <div
-          className="mt-10 max-w-3xl space-y-4 text-black/70"
+          className="mt-10 space-y-4 text-black/70"
           style={{ fontSize: "clamp(12px, 1.5625vw, 25px)" }}
         >
           {aboutText.map((paragraph, i) => (
