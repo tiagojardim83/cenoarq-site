@@ -68,10 +68,7 @@ export default function Home() {
             className="object-cover"
           />
           <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
-            <div className="flex items-start justify-between text-3xl font-bold sm:text-4xl">
-              <span aria-hidden>+</span>
-              <span aria-hidden>+</span>
-            </div>
+            <AnimatedPlusMarks className="flex items-start justify-between text-3xl font-bold sm:text-4xl" />
             <div className="flex items-baseline gap-3">
               <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-[79px]">
                 SERVIÇOS
@@ -96,10 +93,7 @@ export default function Home() {
             className="object-cover"
           />
           <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
-            <div className="flex items-start justify-between text-3xl font-bold sm:text-4xl">
-              <span aria-hidden>+</span>
-              <span aria-hidden>+</span>
-            </div>
+            <AnimatedPlusMarks className="flex items-start justify-between text-3xl font-bold sm:text-4xl" />
             <div className="flex items-baseline gap-3">
               <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-[79px]">
                 PROJETOS
