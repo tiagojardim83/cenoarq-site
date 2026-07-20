@@ -70,12 +70,12 @@ export default async function ProjectPage({
 
         <div className="mt-20 space-y-10">
           {project.gallery.map((image, i) => (
-            <div key={image} className="relative aspect-[21/9] w-full">
+            <div key={image} className="relative aspect-[21/9] w-full overflow-hidden">
               <Image
                 src={assetPath(image)}
                 alt={`${project.title} — imagem ${i + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out hover:scale-105"
               />
             </div>
           ))}

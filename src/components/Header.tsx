@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white">
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-16 md:py-6">
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="shrink-0 transition-opacity hover:opacity-70">
           <Image
             src={assetPath("/logos/cenoarq_horizontal.svg")}
             alt="Cenoarq"
@@ -22,9 +22,10 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-black/80 transition-colors hover:text-black"
+              className="group relative text-black/80 transition-colors hover:text-black"
             >
               {item.label}
+              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-black transition-transform duration-300 ease-out group-hover:scale-x-100" />
             </Link>
           ))}
         </nav>

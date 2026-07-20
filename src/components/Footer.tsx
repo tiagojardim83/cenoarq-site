@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 flex flex-col gap-12 border-t border-white/15 py-10 sm:flex-row sm:items-start sm:justify-between">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-70">
             <Image
               src={assetPath("/logos/Vanilla_cenoarq_horizontal.png")}
               alt="Cenoarq"
@@ -34,7 +34,7 @@ export default function Footer() {
               <ul className="mt-4 space-y-2 text-base text-white/70">
                 {nav.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="hover:text-white">
+                    <Link href={item.href} className="transition-colors hover:text-white">
                       {item.label}
                     </Link>
                   </li>
@@ -50,7 +50,7 @@ export default function Footer() {
                     href={contact.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white"
+                    className="transition-colors hover:text-white"
                   >
                     Instagram
                   </a>
@@ -62,12 +62,12 @@ export default function Footer() {
               <h3 className="text-base font-bold text-white">Contatos</h3>
               <ul className="mt-4 space-y-2 text-base text-white/70">
                 <li>
-                  <a href={`mailto:${contact.email}`} className="hover:text-white">
+                  <a href={`mailto:${contact.email}`} className="transition-colors hover:text-white">
                     {contact.email}
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${contact.phone.replace(/\s|-/g, "")}`} className="hover:text-white">
+                  <a href={`tel:${contact.phone.replace(/\s|-/g, "")}`} className="transition-colors hover:text-white">
                     {contact.phone}
                   </a>
                 </li>
@@ -76,7 +76,7 @@ export default function Footer() {
                     href={contact.whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white"
+                    className="transition-colors hover:text-white"
                   >
                     Whatsapp
                   </a>
@@ -88,7 +88,7 @@ export default function Footer() {
           <a
             href="#top"
             aria-label="Voltar ao topo"
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 transition-colors hover:bg-white hover:text-black"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-black"
           >
             ↑
           </a>

@@ -21,7 +21,7 @@ export default function ContatosPage() {
             E-mail
           </dt>
           <dd className="mt-1">
-            <a href={`mailto:${contact.email}`} className="text-lg hover:underline">
+            <a href={`mailto:${contact.email}`} className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-black hover:underline">
               {contact.email}
             </a>
           </dd>
@@ -33,7 +33,7 @@ export default function ContatosPage() {
           <dd className="mt-1">
             <a
               href={`tel:${contact.phone.replace(/\s|-/g, "")}`}
-              className="text-lg hover:underline"
+              className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-black hover:underline"
             >
               {contact.phone}
             </a>
@@ -48,7 +48,7 @@ export default function ContatosPage() {
               href={contact.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg hover:underline"
+              className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-black hover:underline"
             >
               Enviar mensagem
             </a>

@@ -31,9 +31,12 @@ export default function NewsletterForm() {
       />
       <button
         type="submit"
-        className="flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-base font-medium text-black transition-colors hover:bg-white/90"
+        className="group flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-base font-medium text-black transition-all duration-300 hover:bg-white/90"
       >
-        Sign Up <span aria-hidden>→</span>
+        Sign Up{" "}
+        <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+          →
+        </span>
       </button>
     </form>
   );

@@ -70,7 +70,7 @@ export default function HeroCarousel() {
           </h1>
           <Link
             href="#servicos"
-            className="rounded-full border border-black/40 px-7 py-3 text-sm font-bold transition-colors hover:bg-black hover:text-white"
+            className="rounded-full border border-black/40 px-7 py-3 text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
           >
             ver mais
           </Link>
@@ -81,7 +81,7 @@ export default function HeroCarousel() {
             type="button"
             onClick={() => go(-1)}
             aria-label="Slide anterior"
-            className="flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-black/10"
+            className="flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 hover:scale-110 hover:bg-black/10"
           >
             ‹
           </button>
@@ -89,7 +89,7 @@ export default function HeroCarousel() {
             type="button"
             onClick={() => go(1)}
             aria-label="Próximo slide"
-            className="flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-black/10"
+            className="flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 hover:scale-110 hover:bg-black/10"
           >
             ›
           </button>

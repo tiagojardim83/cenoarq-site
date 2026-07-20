@@ -16,13 +16,13 @@ export default function ServicesAccordion() {
               type="button"
               onClick={() => setOpenSlug(isOpen ? null : service.slug)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between py-8 text-left"
+              className="group flex w-full items-center justify-between py-8 text-left"
             >
-              <h3 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+              <h3 className="font-display text-3xl font-extrabold tracking-tight text-black transition-colors duration-300 sm:text-4xl group-hover:text-black/60">
                 {service.title.toUpperCase()}
               </h3>
               <span
-                className="text-3xl text-black/60 transition-transform duration-300"
+                className="text-3xl text-black/60 transition-all duration-300 group-hover:text-black"
                 style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
                 aria-hidden
               >
