@@ -55,7 +55,7 @@ export default function ParallaxImage({
   }, [strength]);
 
   return (
-    <div ref={containerRef} className={`relative overflow-hidden ${className ?? ""}`}>
+    <div ref={containerRef} className={`overflow-hidden ${className ?? "relative h-full w-full"}`}>
       <Image
         ref={imgRef}
         src={src}
