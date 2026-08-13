@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #111111;
+  --background: #c5ba9a;
+  --foreground: #222222;
   --muted: #8c9091;
-  --brand-red: #b11e29;
+  --brand-red: #af222d;
 }
 
 @theme inline {
@@ -12,6 +12,9 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-brand-red: var(--brand-red);
+  /* Site-wide palette swap: black -> charcoal, white -> cream. */
+  --color-black: #222222;
+  --color-white: #c5ba9a;
   --font-sans: var(--font-inter);
   --font-display: var(--font-archivo);
 }

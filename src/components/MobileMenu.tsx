@@ -75,12 +75,11 @@ export default function MobileMenu() {
           <div className="flex items-center justify-between px-6 py-5">
             <Link href="/" onClick={() => setOpen(false)} className="shrink-0">
               <Image
-                src={assetPath("/logos/cenoarq_horizontal.svg")}
+                src={assetPath("/logos/cenoarq_horizontal_dark.svg")}
                 alt="Cenoarq"
                 width={140}
                 height={26}
                 priority
-                className="brightness-0"
               />
             </Link>
             <button

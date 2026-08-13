@@ -32,11 +32,10 @@ export default function Footer() {
         <div className="flex flex-col gap-12 py-10 sm:flex-row sm:items-start sm:justify-between">
           <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-70">
             <Image
-              src={assetPath("/logos/cenoarq_horizontal.svg")}
+              src={assetPath("/logos/cenoarq_horizontal_cream.svg")}
               alt="Cenoarq"
               width={150}
               height={35}
-              className="brightness-0 invert"
             />
           </Link>
 

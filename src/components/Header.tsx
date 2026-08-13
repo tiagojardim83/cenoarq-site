@@ -10,12 +10,11 @@ export default function Header() {
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-16 md:py-6">
         <Link href="/" className="shrink-0 transition-opacity hover:opacity-70">
           <Image
-            src={assetPath("/logos/cenoarq_horizontal.svg")}
+            src={assetPath("/logos/cenoarq_horizontal_dark.svg")}
             alt="Cenoarq"
             width={155}
             height={29}
             priority
-            className="brightness-0"
           />
         </Link>
         <nav className="hidden gap-10 text-sm tracking-wide sm:flex">

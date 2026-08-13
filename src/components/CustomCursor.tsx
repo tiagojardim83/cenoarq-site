@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const CYAN = "#22d3ee";
-const RED = "#b11e29";
+const RED = "#af222d";
 
 export default function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null);
