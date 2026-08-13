@@ -34,7 +34,7 @@ export default function Home() {
         </SectionTitle>
 
         <div
-          className="mt-10 space-y-4 text-black/70"
+          className="mt-10 space-y-4 text-black"
           style={{ fontSize: "clamp(12px, 1.5625vw, 25px)" }}
         >
           {aboutText.map((paragraph, i) => (
@@ -68,11 +68,11 @@ export default function Home() {
             <div className="flex items-baseline gap-3">
               <SectionTitle
                 as="h2"
-                className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]"
+                className="font-display text-4xl font-extrabold tracking-tight text-white transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]"
               >
                 SERVIÇOS
               </SectionTitle>
-              <span className="whitespace-nowrap text-base italic text-black/60 sm:text-xl">
+              <span className="whitespace-nowrap text-base italic text-white/70 sm:text-xl">
                 / {pad(2)}
               </span>
             </div>
@@ -91,11 +91,11 @@ export default function Home() {
             <div className="flex items-baseline gap-3">
               <SectionTitle
                 as="h2"
-                className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]"
+                className="font-display text-4xl font-extrabold tracking-tight text-white transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]"
               >
                 PROJETOS
               </SectionTitle>
-              <span className="whitespace-nowrap text-base italic text-black/60 sm:text-xl">
+              <span className="whitespace-nowrap text-base italic text-white/70 sm:text-xl">
                 / {pad(projects.length)}
               </span>
             </div>

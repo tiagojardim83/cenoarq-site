@@ -5,7 +5,7 @@ const track = [...base, ...base];
 
 export default function FooterMarquee() {
   return (
-    <div className="marquee-wrap overflow-hidden border-y border-white/15 py-6">
+    <div className="overflow-hidden border-y border-white/15 py-6">
       <div className="flex w-max animate-marquee items-center gap-8">
         {track.map((t, i) => (
           <span key={i} className="flex items-center gap-8">
