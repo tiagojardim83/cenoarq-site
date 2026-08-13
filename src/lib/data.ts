@@ -19,7 +19,13 @@ export const heroSlides = [
   { label: "arquitetura", image: "/images/hero-arquitetura-2.jpg" },
 ];
 
-export const services = [
+export type Service = {
+  slug: string;
+  title: string;
+  description: string;
+};
+
+export const services: Service[] = [
   {
     slug: "arquitetura",
     title: "Arquitetura",

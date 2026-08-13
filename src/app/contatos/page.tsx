@@ -1,4 +1,5 @@
 import { contact } from "@/lib/data";
+import SectionTitle from "@/components/SectionTitle";
 
 export const metadata = {
   title: "Contatos | Cenoarq",
@@ -7,9 +8,12 @@ export const metadata = {
 export default function ContatosPage() {
   return (
     <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-16">
-      <h1 className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl">
+      <SectionTitle
+        as="h1"
+        className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl"
+      >
         Contatos
-      </h1>
+      </SectionTitle>
       <p className="mt-6 max-w-xl text-xl text-black/70 sm:text-2xl">
         Tem um evento em mente? Fale com a CENOARQ e vamos transformar seu
         conceito em uma experiência memorável.

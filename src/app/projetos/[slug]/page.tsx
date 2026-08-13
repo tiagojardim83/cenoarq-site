@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
 import ParallaxImage from "@/components/ParallaxImage";
+import SectionTitle from "@/components/SectionTitle";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -23,9 +24,12 @@ export default async function ProjectPage({
   return (
     <div>
       <div className="mx-auto max-w-[1600px] px-6 pt-10 md:px-16">
-        <h1 className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl">
+        <SectionTitle
+          as="h1"
+          className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl"
+        >
           {project.title.toUpperCase()}
-        </h1>
+        </SectionTitle>
       </div>
 
       <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden sm:aspect-[21/9]">
@@ -55,11 +59,14 @@ export default async function ProjectPage({
             <span aria-hidden>+</span>
           </div>
           <div>
-            <h2 className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-5xl">
+            <SectionTitle
+              as="h2"
+              className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-5xl"
+            >
               {project.title.toUpperCase()}
               <br />
               {project.subtitle.toUpperCase()}
-            </h2>
+            </SectionTitle>
             <div className="mt-6 space-y-4 text-xl text-black/70 sm:text-2xl">
               {project.description.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
