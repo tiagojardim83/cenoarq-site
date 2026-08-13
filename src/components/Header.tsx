@@ -15,6 +15,7 @@ export default function Header() {
             width={155}
             height={29}
             priority
+            className="brightness-0"
           />
         </Link>
         <nav className="hidden gap-10 text-sm tracking-wide sm:flex">

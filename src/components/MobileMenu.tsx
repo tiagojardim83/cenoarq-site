@@ -58,6 +58,7 @@ export default function MobileMenu() {
                 width={140}
                 height={26}
                 priority
+                className="brightness-0"
               />
             </Link>
             <button

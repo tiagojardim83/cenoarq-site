@@ -113,7 +113,7 @@ export default function Home() {
             <Link
               key={project.slug}
               href={`/projetos/${project.slug}`}
-              className="group flex flex-col gap-2 border-b border-black/10 px-4 py-8 -mx-4 transition-colors duration-300 hover:bg-black/[0.03]"
+              className="group flex flex-col gap-2 border-b border-black/10 py-8"
             >
               <div className="flex items-baseline justify-between gap-4">
                 <p className="font-display text-2xl font-extrabold transition-transform duration-300 ease-out group-hover:translate-x-2 sm:text-3xl">

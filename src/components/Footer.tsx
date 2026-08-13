@@ -21,10 +21,11 @@ export default function Footer() {
         <div className="mt-20 flex flex-col gap-12 border-t border-white/15 py-10 sm:flex-row sm:items-start sm:justify-between">
           <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-70">
             <Image
-              src={assetPath("/logos/Vanilla_cenoarq_horizontal.png")}
+              src={assetPath("/logos/cenoarq_horizontal.svg")}
               alt="Cenoarq"
               width={150}
               height={35}
+              className="brightness-0 invert"
             />
           </Link>
 
