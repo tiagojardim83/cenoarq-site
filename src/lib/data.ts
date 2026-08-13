@@ -14,9 +14,9 @@ export const stats = [
 ];
 
 export const heroSlides = [
-  { label: "cenografia", image: "/images/hero-1-cenografia.jpg" },
-  { label: "arquitetura", image: "/images/hero-2-arquitetura.jpg" },
-  { label: "cenografia", image: "/images/hero-3-cenografia.jpg" },
+  { label: "cenografia", image: "/images/hero-1-cenografia.jpg", dark: true },
+  { label: "arquitetura", image: "/images/hero-2-arquitetura.jpg", dark: false },
+  { label: "cenografia", image: "/images/hero-3-cenografia.jpg", dark: true },
 ];
 
 export const projetosBannerImages = [
@@ -24,6 +24,13 @@ export const projetosBannerImages = [
   "/images/projetos-2.jpg",
   "/images/projetos-3.jpg",
   "/images/projetos-4.jpg",
+];
+
+export const servicosBannerImages = [
+  "/images/services-1.jpg",
+  "/images/services-2.jpg",
+  "/images/services-3.jpg",
+  "/images/services-4.jpg",
 ];
 
 export type Service = {

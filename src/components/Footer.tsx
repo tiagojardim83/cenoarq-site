@@ -106,8 +106,18 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="border-t border-white/15 py-6 text-xs text-white/50">
-          © {new Date().getFullYear()} Cenoarq. Todos os direitos reservados.
+        <div className="flex flex-col gap-2 border-t border-white/15 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            © {new Date().getFullYear()} Cenoarq. Todos os direitos reservados.
+          </span>
+          <a
+            href="https://www.tgarden.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-white"
+          >
+            Webdesign: TGARDEN_STUDIO
+          </a>
         </div>
       </div>
     </footer>

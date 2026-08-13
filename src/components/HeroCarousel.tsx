@@ -14,6 +14,7 @@ export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
   const total = heroSlides.length;
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isDark = heroSlides[index].dark;
 
   function startAutoplay() {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -54,10 +55,17 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
+      <div
+        className={`absolute inset-0 flex flex-col justify-between px-6 py-10 transition-colors duration-500 sm:px-16 sm:py-14 ${
+          isDark ? "text-white" : "text-black"
+        }`}
+      >
         <div className="flex items-center gap-4 text-xl font-extrabold sm:text-2xl">
           <span>{pad(index + 1)}</span>
-          <span className="h-px w-20 bg-black/50 sm:w-32" aria-hidden />
+          <span
+            className={`h-px w-20 sm:w-32 ${isDark ? "bg-white/60" : "bg-black/50"}`}
+            aria-hidden
+          />
           <span>{pad(total)}</span>
         </div>
 
@@ -70,7 +78,11 @@ export default function HeroCarousel() {
           </h1>
           <Link
             href="#servicos"
-            className="rounded-full border border-black/40 px-7 py-3 text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
+            className={`rounded-full border px-7 py-3 text-sm font-bold transition-all duration-300 hover:scale-105 ${
+              isDark
+                ? "border-white/60 hover:bg-white hover:text-black"
+                : "border-black/40 hover:bg-black hover:text-white"
+            }`}
           >
             ver mais
           </Link>
@@ -81,7 +93,9 @@ export default function HeroCarousel() {
             type="button"
             onClick={() => go(-1)}
             aria-label="Slide anterior"
-            className="flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 hover:scale-110 hover:bg-black/10"
+            className={`flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 hover:scale-110 ${
+              isDark ? "hover:bg-white/20" : "hover:bg-black/10"
+            }`}
           >
             ‹
           </button>
@@ -89,7 +103,9 @@ export default function HeroCarousel() {
             type="button"
             onClick={() => go(1)}
             aria-label="Próximo slide"
-            className="flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 hover:scale-110 hover:bg-black/10"
+            className={`flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 hover:scale-110 ${
+              isDark ? "hover:bg-white/20" : "hover:bg-black/10"
+            }`}
           >
             ›
           </button>
