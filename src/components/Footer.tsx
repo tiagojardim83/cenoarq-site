@@ -3,6 +3,7 @@ import Link from "next/link";
 import { nav, contact } from "@/lib/data";
 import { assetPath } from "@/lib/site-config";
 import NewsletterForm from "@/components/NewsletterForm";
+import FooterMarquee from "@/components/FooterMarquee";
 
 export default function Footer() {
   return (
@@ -17,8 +18,14 @@ export default function Footer() {
         <div className="mt-10">
           <NewsletterForm />
         </div>
+      </div>
 
-        <div className="mt-20 flex flex-col gap-12 border-t border-white/15 py-10 sm:flex-row sm:items-start sm:justify-between">
+      <div className="mt-16">
+        <FooterMarquee />
+      </div>
+
+      <div className="mx-auto max-w-[1600px] px-6 md:px-16">
+        <div className="flex flex-col gap-12 py-10 sm:flex-row sm:items-start sm:justify-between">
           <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-70">
             <Image
               src={assetPath("/logos/cenoarq_horizontal.svg")}

@@ -23,10 +23,10 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="group relative text-black/80 transition-colors hover:text-black"
+              className="group relative text-black/80 transition-colors hover:text-brand-red"
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-black transition-transform duration-300 ease-out group-hover:scale-x-100" />
+              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-brand-red transition-transform duration-300 ease-out group-hover:scale-x-100" />
             </Link>
           ))}
         </nav>

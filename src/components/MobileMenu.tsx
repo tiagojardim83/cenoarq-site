@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { nav, contact } from "@/lib/data";
@@ -35,6 +35,28 @@ function WhatsappIcon() {
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+
+  // On mobile there's no cursor, so the "hover" state instead activates
+  // whichever link is passing through the vertical center of the screen
+  // as the list scrolls (works scrolling either direction).
+  useEffect(() => {
+    if (!open) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = linkRefs.current.findIndex((el) => el === entry.target);
+            if (idx !== -1) setActiveIndex(idx);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px", threshold: 0 },
+    );
+    linkRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, [open]);
 
   return (
     <div className="sm:hidden">
@@ -71,13 +93,18 @@ export default function MobileMenu() {
             </button>
           </div>
 
-          <nav className="flex flex-1 flex-col justify-center gap-6 px-8">
-            {nav.map((item) => (
+          <nav className="flex flex-1 flex-col justify-center gap-6 overflow-y-auto px-8">
+            {nav.map((item, i) => (
               <Link
                 key={item.href}
+                ref={(el) => {
+                  linkRefs.current[i] = el;
+                }}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="font-display text-4xl font-extrabold tracking-tight transition-colors hover:text-black/60"
+                className={`font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 ${
+                  activeIndex === i ? "text-brand-red" : "text-black"
+                }`}
               >
                 {item.label}
               </Link>
