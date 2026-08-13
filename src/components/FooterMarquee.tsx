@@ -10,7 +10,7 @@ export default function FooterMarquee() {
         {track.map((t, i) => (
           <span
             key={i}
-            className="font-display whitespace-nowrap text-5xl font-extrabold uppercase tracking-tight text-white sm:text-7xl lg:text-8xl"
+            className="font-display whitespace-nowrap text-5xl font-extrabold uppercase tracking-tight text-brand-red sm:text-7xl lg:text-8xl"
           >
             {t}
           </span>

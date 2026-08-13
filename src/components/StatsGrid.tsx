@@ -64,7 +64,7 @@ export default function StatsGrid() {
               transitionDelay: `${i * 120}ms`,
             }}
           >
-            <p className="font-display text-6xl text-[#6e6e6e] sm:text-7xl lg:text-[85px]">
+            <p className="font-display text-6xl text-brand-red sm:text-7xl lg:text-[85px]">
               <span className="font-normal">+</span>
               <span className="font-black">
                 <StatNumber target={target} active={visible} />
