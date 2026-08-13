@@ -19,6 +19,13 @@ export const heroSlides = [
   { label: "cenografia", image: "/images/hero-3-cenografia.jpg" },
 ];
 
+export const projetosBannerImages = [
+  "/images/projetos-1.jpg",
+  "/images/projetos-2.jpg",
+  "/images/projetos-3.jpg",
+  "/images/projetos-4.jpg",
+];
+
 export type Service = {
   slug: string;
   title: string;
