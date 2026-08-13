@@ -26,7 +26,7 @@ export default function Home() {
         />
 
         <h2
-          className="font-display mt-6 font-extrabold leading-[1.05] tracking-tight"
+          className="font-display mt-6 font-extrabold leading-[1.05] tracking-tight transition-colors duration-300 hover:text-brand-red"
           style={{ fontSize: "clamp(24px, 6.25vw, 100px)" }}
         >
           Transformando espaços em experiências memoráveis.
@@ -69,7 +69,7 @@ export default function Home() {
           <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
             <AnimatedPlusMarks className="flex items-start justify-between text-3xl font-bold sm:text-4xl" />
             <div className="flex items-baseline gap-3">
-              <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-[79px]">
+              <h2 className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]">
                 SERVIÇOS
               </h2>
               <span className="whitespace-nowrap text-base italic text-black/60 sm:text-xl">
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 sm:px-16 sm:py-14">
             <AnimatedPlusMarks className="flex items-start justify-between text-3xl font-bold sm:text-4xl" />
             <div className="flex items-baseline gap-3">
-              <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-[79px]">
+              <h2 className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]">
                 PROJETOS
               </h2>
               <span className="whitespace-nowrap text-base italic text-black/60 sm:text-xl">
@@ -116,7 +116,7 @@ export default function Home() {
               className="group flex flex-col gap-2 border-b border-black/10 py-8"
             >
               <div className="flex items-baseline justify-between gap-4">
-                <p className="font-display text-2xl font-extrabold transition-transform duration-300 ease-out group-hover:translate-x-2 sm:text-3xl">
+                <p className="font-display text-2xl font-extrabold transition-all duration-300 ease-out group-hover:translate-x-2 group-hover:text-brand-red sm:text-3xl">
                   {project.title}
                 </p>
                 <span className="hidden text-xl italic text-black/40 sm:inline sm:text-2xl lg:text-[27px]">
@@ -128,7 +128,7 @@ export default function Home() {
                 <p className="text-base italic text-black/50 transition-transform duration-300 ease-out group-hover:translate-x-2 sm:text-lg">
                   {project.subtitle}
                 </p>
-                <span className="text-base italic text-black/50 underline decoration-black/30 underline-offset-4 transition-colors group-hover:text-black">
+                <span className="text-base italic text-black/50 underline decoration-black/30 underline-offset-4 transition-colors group-hover:text-brand-red">
                   ver mais
                 </span>
               </div>
@@ -141,7 +141,7 @@ export default function Home() {
       <section id="clientes" className="py-20">
         <div className="mx-auto max-w-[1600px] px-6 md:px-16">
           <div className="flex items-baseline gap-2">
-            <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[62px]">
+            <h2 className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-5xl lg:text-[62px]">
               CLIENTES
             </h2>
             <span className="text-sm italic text-black/40">

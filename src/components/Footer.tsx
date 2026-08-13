@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="mx-auto max-w-[1600px] px-6 pt-16 md:px-16">
-        <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-8xl lg:text-9xl">
+        <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl md:text-8xl lg:text-9xl">
           Seja o primeiro a
           <br />
           receber nossas novidades!

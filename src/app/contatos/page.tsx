@@ -7,7 +7,7 @@ export const metadata = {
 export default function ContatosPage() {
   return (
     <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-16">
-      <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+      <h1 className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl">
         Contatos
       </h1>
       <p className="mt-6 max-w-xl text-xl text-black/70 sm:text-2xl">
@@ -21,7 +21,7 @@ export default function ContatosPage() {
             E-mail
           </dt>
           <dd className="mt-1">
-            <a href={`mailto:${contact.email}`} className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-black hover:underline">
+            <a href={`mailto:${contact.email}`} className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-brand-red hover:underline">
               {contact.email}
             </a>
           </dd>
@@ -33,7 +33,7 @@ export default function ContatosPage() {
           <dd className="mt-1">
             <a
               href={`tel:${contact.phone.replace(/\s|-/g, "")}`}
-              className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-black hover:underline"
+              className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-brand-red hover:underline"
             >
               {contact.phone}
             </a>
@@ -48,7 +48,7 @@ export default function ContatosPage() {
               href={contact.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-black hover:underline"
+              className="inline-block text-lg text-black/70 transition-all hover:translate-x-1 hover:text-brand-red hover:underline"
             >
               Enviar mensagem
             </a>

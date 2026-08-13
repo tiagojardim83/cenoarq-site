@@ -23,7 +23,7 @@ export default async function ProjectPage({
   return (
     <div>
       <div className="mx-auto max-w-[1600px] px-6 pt-10 md:px-16">
-        <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+        <h1 className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl">
           {project.title.toUpperCase()}
         </h1>
       </div>
@@ -55,7 +55,7 @@ export default async function ProjectPage({
             <span aria-hidden>+</span>
           </div>
           <div>
-            <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h2 className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-5xl">
               {project.title.toUpperCase()}
               <br />
               {project.subtitle.toUpperCase()}
