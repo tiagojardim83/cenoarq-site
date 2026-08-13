@@ -14,9 +14,9 @@ export const stats = [
 ];
 
 export const heroSlides = [
-  { label: "cenografia", image: "/images/hero-building.jpg" },
-  { label: "arquitetura", image: "/images/hero-arquitetura-1.jpg" },
-  { label: "arquitetura", image: "/images/hero-arquitetura-2.jpg" },
+  { label: "cenografia", image: "/images/hero-1-cenografia.jpg" },
+  { label: "arquitetura", image: "/images/hero-2-arquitetura.jpg" },
+  { label: "cenografia", image: "/images/hero-3-cenografia.jpg" },
 ];
 
 export type Service = {
