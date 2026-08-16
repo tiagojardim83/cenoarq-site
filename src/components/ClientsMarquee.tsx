@@ -5,7 +5,7 @@ export default function ClientsMarquee() {
   const track = [...clients, ...clients];
 
   return (
-    <div className="marquee-wrap overflow-hidden">
+    <div className="overflow-hidden">
       <div className="flex w-max animate-marquee items-center gap-20 py-4">
         {track.map((client, i) => {
           const url = assetPath(client.logo);

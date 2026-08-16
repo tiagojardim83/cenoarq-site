@@ -98,8 +98,13 @@ export const projects: Project[] = [
     subtitle: "Summer Times",
     category: "cenografia",
     year: "2025",
-    heroImage: "/images/love-wine-hero.jpg",
-    gallery: placeholderGallery,
+    heroImage: "/images/LoveWine_02.jpg",
+    gallery: [
+      "/images/LoveWine_01.jpg",
+      "/images/LoveWine_03.jpg",
+      "/images/LoveWine_04.jpg",
+      "/images/LoveWine_05.jpg",
+    ],
     description: placeholderDescription,
   },
   {

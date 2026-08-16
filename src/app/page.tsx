@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { projects, clients, aboutText, projetosBannerImages, servicosBannerImages, brandShapes } from "@/lib/data";
-import { assetPath } from "@/lib/site-config";
 import ClientsMarquee from "@/components/ClientsMarquee";
 import ServicesAccordion from "@/components/ServicesAccordion";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -118,17 +116,8 @@ export default function Home() {
       </section>
 
       {/* Marca */}
-      <section className="bg-black py-20 md:py-28">
+      <section className="bg-black py-16 md:py-20">
         <FloatingShapes images={brandShapes} />
-        <div className="mt-14 flex justify-center md:mt-20">
-          <Image
-            src={assetPath("/images/signature.png")}
-            alt="Assinatura Cenoarq"
-            width={239}
-            height={94}
-            className="h-14 w-auto opacity-90 sm:h-16"
-          />
-        </div>
       </section>
 
       {/* Clientes */}
