@@ -1,4 +1,6 @@
-import { projects, clients, aboutText, projetosBannerImages, servicosBannerImages } from "@/lib/data";
+import Image from "next/image";
+import { projects, clients, aboutText, projetosBannerImages, servicosBannerImages, brandShapes } from "@/lib/data";
+import { assetPath } from "@/lib/site-config";
 import ClientsMarquee from "@/components/ClientsMarquee";
 import ServicesAccordion from "@/components/ServicesAccordion";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -7,6 +9,7 @@ import AnimatedPlusMarks from "@/components/AnimatedPlusMarks";
 import BannerCarousel from "@/components/BannerCarousel";
 import SectionTitle from "@/components/SectionTitle";
 import ProjectRow from "@/components/ProjectRow";
+import FloatingShapes from "@/components/FloatingShapes";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -111,6 +114,53 @@ export default function Home() {
           {projects.map((project) => (
             <ProjectRow key={project.slug} project={project} />
           ))}
+        </div>
+      </section>
+
+      {/* Marca */}
+      <section className="bg-black py-20 md:py-28">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-16">
+          <div className="flex items-start justify-between gap-6">
+            <div
+              role="img"
+              aria-label="Cenoarq"
+              className="h-16 w-[64px] shrink-0 bg-white sm:h-20 sm:w-[80px]"
+              style={{
+                WebkitMaskImage: `url(${assetPath("/images/logo-vertical.png")})`,
+                maskImage: `url(${assetPath("/images/logo-vertical.png")})`,
+                WebkitMaskSize: "contain",
+                maskSize: "contain",
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                WebkitMaskPosition: "left center",
+                maskPosition: "left center",
+              }}
+            />
+            <p className="font-display text-right text-lg font-extrabold leading-tight text-white sm:text-xl md:text-2xl">
+              cenoarq
+              <br />
+              .com.br
+            </p>
+          </div>
+
+          <div className="my-16 md:my-24">
+            <FloatingShapes images={brandShapes} />
+          </div>
+
+          <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
+            <p className="font-display text-3xl font-extrabold uppercase leading-[1.05] text-white sm:text-4xl md:text-5xl">
+              Cenografia
+              <br />
+              &amp; Arquitetura
+            </p>
+            <Image
+              src={assetPath("/images/signature.png")}
+              alt="Assinatura Cenoarq"
+              width={239}
+              height={94}
+              className="h-16 w-auto opacity-90 sm:h-20"
+            />
+          </div>
         </div>
       </section>
 

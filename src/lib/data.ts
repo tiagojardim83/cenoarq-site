@@ -33,6 +33,15 @@ export const servicosBannerImages = [
   "/images/services-4.jpg",
 ];
 
+export const brandShapes = [
+  "/images/shape-1.png",
+  "/images/shape-2.png",
+  "/images/shape-3.png",
+  "/images/shape-4.png",
+  "/images/shape-5.png",
+  "/images/shape-6.png",
+];
+
 export type Service = {
   slug: string;
   title: string;
