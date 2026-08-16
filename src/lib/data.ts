@@ -6,7 +6,12 @@ export const nav = [
   { label: "Contatos", href: "/contatos" },
 ];
 
-export const stats = [
+export type Stat = {
+  value: string;
+  label: string;
+};
+
+export const stats: Stat[] = [
   { value: "+15", label: "anos de história" },
   { value: "+84", label: "eventos realizados" },
   { value: "+102", label: "projetos realizados" },

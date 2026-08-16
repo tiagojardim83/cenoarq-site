@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { stats } from "@/lib/data";
+import { stats, type Stat } from "@/lib/data";
+import { useCenterActive } from "@/hooks/useCenterActive";
 
 function StatNumber({ target, active }: { target: number; active: boolean }) {
   const [value, setValue] = useState(0);
@@ -31,6 +32,45 @@ function StatNumber({ target, active }: { target: number; active: boolean }) {
   return <>{value}</>;
 }
 
+function StatItem({
+  stat,
+  index,
+  revealed,
+}: {
+  stat: Stat;
+  index: number;
+  revealed: boolean;
+}) {
+  const target = parseInt(stat.value.replace("+", ""), 10);
+  const { ref, active } = useCenterActive<HTMLDivElement>();
+
+  return (
+    <div
+      ref={ref}
+      className="group border-y border-black/20 pb-6 pt-6 transition-all duration-700 ease-out"
+      style={{
+        opacity: revealed ? 1 : 0,
+        transform: revealed ? "translateY(0)" : "translateY(24px)",
+        transitionDelay: `${index * 120}ms`,
+      }}
+    >
+      <p className="font-display text-6xl text-black sm:text-7xl lg:text-[85px]">
+        <span className="font-normal">+</span>
+        <span className="font-black">
+          <StatNumber target={target} active={revealed} />
+        </span>
+      </p>
+      <p
+        className={`mt-1 text-xl transition-colors duration-300 sm:text-2xl lg:text-[28px] ${
+          active ? "text-brand-red" : "text-black/50 group-hover:text-brand-red"
+        }`}
+      >
+        {stat.label}
+      </p>
+    </div>
+  );
+}
+
 export default function StatsGrid() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -52,30 +92,9 @@ export default function StatsGrid() {
       ref={ref}
       className="mt-16 grid grid-cols-2 gap-x-10 gap-y-16 sm:gap-x-20 sm:gap-y-24 lg:grid-cols-[max-content_max-content] lg:justify-between lg:gap-x-0 lg:px-24"
     >
-      {stats.map((stat, i) => {
-        const target = parseInt(stat.value.replace("+", ""), 10);
-        return (
-          <div
-            key={stat.label}
-            className="border-y border-black/20 pb-6 pt-6 transition-all duration-700 ease-out"
-            style={{
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateY(0)" : "translateY(24px)",
-              transitionDelay: `${i * 120}ms`,
-            }}
-          >
-            <p className="font-display text-6xl text-black sm:text-7xl lg:text-[85px]">
-              <span className="font-normal">+</span>
-              <span className="font-black">
-                <StatNumber target={target} active={visible} />
-              </span>
-            </p>
-            <p className="mt-1 text-xl text-[#c2c2c2] sm:text-2xl lg:text-[28px]">
-              {stat.label}
-            </p>
-          </div>
-        );
-      })}
+      {stats.map((stat, i) => (
+        <StatItem key={stat.label} stat={stat} index={i} revealed={visible} />
+      ))}
     </div>
   );
 }

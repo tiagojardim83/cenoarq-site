@@ -119,48 +119,15 @@ export default function Home() {
 
       {/* Marca */}
       <section className="bg-black py-20 md:py-28">
-        <div className="mx-auto max-w-[1600px] px-6 md:px-16">
-          <div className="flex items-start justify-between gap-6">
-            <div
-              role="img"
-              aria-label="Cenoarq"
-              className="h-16 w-[64px] shrink-0 bg-white sm:h-20 sm:w-[80px]"
-              style={{
-                WebkitMaskImage: `url(${assetPath("/images/logo-vertical.png")})`,
-                maskImage: `url(${assetPath("/images/logo-vertical.png")})`,
-                WebkitMaskSize: "contain",
-                maskSize: "contain",
-                WebkitMaskRepeat: "no-repeat",
-                maskRepeat: "no-repeat",
-                WebkitMaskPosition: "left center",
-                maskPosition: "left center",
-              }}
-            />
-            <p className="font-display text-right text-lg font-extrabold leading-tight text-white sm:text-xl md:text-2xl">
-              cenoarq
-              <br />
-              .com.br
-            </p>
-          </div>
-
-          <div className="my-16 md:my-24">
-            <FloatingShapes images={brandShapes} />
-          </div>
-
-          <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
-            <p className="font-display text-3xl font-extrabold uppercase leading-[1.05] text-white sm:text-4xl md:text-5xl">
-              Cenografia
-              <br />
-              &amp; Arquitetura
-            </p>
-            <Image
-              src={assetPath("/images/signature.png")}
-              alt="Assinatura Cenoarq"
-              width={239}
-              height={94}
-              className="h-16 w-auto opacity-90 sm:h-20"
-            />
-          </div>
+        <FloatingShapes images={brandShapes} />
+        <div className="mt-14 flex justify-center md:mt-20">
+          <Image
+            src={assetPath("/images/signature.png")}
+            alt="Assinatura Cenoarq"
+            width={239}
+            height={94}
+            className="h-14 w-auto opacity-90 sm:h-16"
+          />
         </div>
       </section>
 
