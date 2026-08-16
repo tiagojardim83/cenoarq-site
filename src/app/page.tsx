@@ -28,15 +28,15 @@ export default function Home() {
 
         <SectionTitle
           as="h2"
-          className="font-display mt-6 font-extrabold leading-[1.05] tracking-tight transition-colors duration-300 hover:text-brand-red"
+          className="font-display mt-6 font-extrabold leading-[1.05] tracking-tight"
           style={{ fontSize: "clamp(24px, 6.25vw, 100px)" }}
         >
           Transformando espaços em experiências memoráveis.
         </SectionTitle>
 
         <div
-          className="mt-10 space-y-4 text-black"
-          style={{ fontSize: "clamp(12px, 1.5625vw, 25px)" }}
+          className="mt-10 space-y-5 leading-relaxed tracking-wide text-black"
+          style={{ fontSize: "clamp(13px, 1.25vw, 20px)" }}
         >
           {aboutText.map((paragraph, i) => (
             <p key={i}>
@@ -69,7 +69,7 @@ export default function Home() {
             <div className="flex items-baseline gap-3">
               <SectionTitle
                 as="h2"
-                className="font-display text-4xl font-extrabold tracking-tight text-white transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]"
+                className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-[79px]"
               >
                 SERVIÇOS
               </SectionTitle>
@@ -92,7 +92,7 @@ export default function Home() {
             <div className="flex items-baseline gap-3">
               <SectionTitle
                 as="h2"
-                className="font-display text-4xl font-extrabold tracking-tight text-white transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-[79px]"
+                className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-[79px]"
               >
                 PROJETOS
               </SectionTitle>
@@ -126,7 +126,7 @@ export default function Home() {
           <div className="flex items-baseline gap-2">
             <SectionTitle
               as="h2"
-              className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-5xl lg:text-[62px]"
+              className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[62px]"
             >
               CLIENTES
             </SectionTitle>

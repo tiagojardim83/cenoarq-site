@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { services, type Service } from "@/lib/data";
 import { useCenterActive } from "@/hooks/useCenterActive";
+import { hoverLetters } from "@/components/HoverLetters";
 
 function ServiceItem({
   service,
@@ -25,11 +26,11 @@ function ServiceItem({
         className="group flex w-full items-center justify-between py-8 text-left"
       >
         <h3
-          className={`font-display text-3xl font-extrabold tracking-tight text-black transition-colors duration-300 sm:text-4xl ${
-            active ? "!text-brand-red" : "group-hover:text-brand-red"
+          className={`font-display text-3xl font-extrabold tracking-tight text-black sm:text-4xl ${
+            active ? "!text-brand-red" : ""
           }`}
         >
-          {service.title.toUpperCase()}
+          {hoverLetters(service.title.toUpperCase(), service.slug)}
         </h3>
         <span
           className={`text-3xl text-black/60 transition-all duration-300 ${
@@ -46,7 +47,7 @@ function ServiceItem({
         style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
       >
         <div className="min-h-0">
-          <p className="max-w-2xl pb-8 text-lg text-black/70 sm:text-xl">
+          <p className="pb-8 text-base leading-relaxed tracking-wide text-black/70 sm:text-lg">
             {service.description}
           </p>
         </div>

@@ -5,6 +5,7 @@ import { assetPath } from "@/lib/site-config";
 import NewsletterForm from "@/components/NewsletterForm";
 import FooterMarquee from "@/components/FooterMarquee";
 import SectionTitle from "@/components/SectionTitle";
+import { WhatsappIcon } from "@/components/icons";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1600px] px-6 pt-16 md:px-16">
         <SectionTitle
           as="h2"
-          className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl md:text-8xl lg:text-9xl"
+          className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-8xl lg:text-9xl"
         >
           Seja o primeiro a
           <br />
@@ -45,7 +46,7 @@ export default function Footer() {
               <ul className="mt-4 space-y-2 text-base text-white/70">
                 {nav.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="transition-colors hover:text-white">
+                    <Link href={item.href} className="transition-colors hover:text-brand-red">
                       {item.label}
                     </Link>
                   </li>
@@ -61,7 +62,7 @@ export default function Footer() {
                     href={contact.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors hover:text-white"
+                    className="transition-colors hover:text-brand-red"
                   >
                     Instagram
                   </a>
@@ -73,12 +74,12 @@ export default function Footer() {
               <h3 className="text-base font-bold text-white">Contatos</h3>
               <ul className="mt-4 space-y-2 text-base text-white/70">
                 <li>
-                  <a href={`mailto:${contact.email}`} className="transition-colors hover:text-white">
+                  <a href={`mailto:${contact.email}`} className="transition-colors hover:text-brand-red">
                     {contact.email}
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${contact.phone.replace(/\s|-/g, "")}`} className="transition-colors hover:text-white">
+                  <a href={`tel:${contact.phone.replace(/\s|-/g, "")}`} className="transition-colors hover:text-brand-red">
                     {contact.phone}
                   </a>
                 </li>
@@ -87,9 +88,11 @@ export default function Footer() {
                     href={contact.whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors hover:text-white"
+                    aria-label="WhatsApp"
+                    className="inline-flex items-center gap-2 transition-colors hover:text-brand-red"
                   >
-                    Whatsapp
+                    <WhatsappIcon className="h-5 w-5" />
+                    {contact.phone}
                   </a>
                 </li>
               </ul>
@@ -99,7 +102,7 @@ export default function Footer() {
           <a
             href="#top"
             aria-label="Voltar ao topo"
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-black"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:-translate-y-1 hover:border-brand-red hover:bg-brand-red hover:text-white"
           >
             ↑
           </a>
@@ -113,7 +116,7 @@ export default function Footer() {
             href="https://www.tgarden.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-white"
+            className="transition-colors hover:text-brand-red"
           >
             Webdesign: TGARDEN_STUDIO
           </a>

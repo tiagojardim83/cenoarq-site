@@ -26,7 +26,7 @@ export default async function ProjectPage({
       <div className="mx-auto max-w-[1600px] px-6 pt-10 md:px-16">
         <SectionTitle
           as="h1"
-          className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl"
+          className="font-display text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
         >
           {project.title.toUpperCase()}
         </SectionTitle>
@@ -61,13 +61,13 @@ export default async function ProjectPage({
           <div>
             <SectionTitle
               as="h2"
-              className="font-display text-4xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-5xl"
+              className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl"
             >
               {project.title.toUpperCase()}
               <br />
               {project.subtitle.toUpperCase()}
             </SectionTitle>
-            <div className="mt-6 space-y-4 text-xl text-black/70 sm:text-2xl">
+            <div className="mt-6 space-y-5 text-base leading-relaxed tracking-wide text-black/70 sm:text-lg">
               {project.description.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}

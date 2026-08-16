@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCenterActive } from "@/hooks/useCenterActive";
+import { hoverLetters } from "@/components/HoverLetters";
 import type { Project } from "@/lib/data";
 
 export default function ProjectRow({ project }: { project: Project }) {
@@ -16,12 +17,10 @@ export default function ProjectRow({ project }: { project: Project }) {
       <div className="flex items-baseline justify-between gap-4">
         <p
           className={`font-display text-2xl font-extrabold transition-all duration-300 ease-out sm:text-3xl ${
-            active
-              ? "translate-x-2 !text-brand-red"
-              : "group-hover:translate-x-2 group-hover:text-brand-red"
+            active ? "translate-x-2 !text-brand-red" : "group-hover:translate-x-2"
           }`}
         >
-          {project.title}
+          {hoverLetters(project.title, project.slug)}
         </p>
         <span className="hidden text-xl italic text-black/40 sm:inline sm:text-2xl lg:text-[27px]">
           {project.category}

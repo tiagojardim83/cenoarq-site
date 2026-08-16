@@ -10,11 +10,11 @@ export default function ContatosPage() {
     <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-16">
       <SectionTitle
         as="h1"
-        className="font-display text-5xl font-extrabold tracking-tight transition-colors duration-300 hover:text-brand-red sm:text-6xl lg:text-7xl"
+        className="font-display text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
       >
         Contatos
       </SectionTitle>
-      <p className="mt-6 max-w-xl text-xl text-black/70 sm:text-2xl">
+      <p className="mt-6 max-w-xl text-base leading-relaxed tracking-wide text-black/70 sm:text-lg">
         Tem um evento em mente? Fale com a CENOARQ e vamos transformar seu
         conceito em uma experiência memorável.
       </p>
